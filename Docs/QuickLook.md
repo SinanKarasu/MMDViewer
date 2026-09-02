@@ -7,9 +7,12 @@ Type Identifier and registers itself as an editor for `.mmd` files. This Mac
 also has an existing `uk.co.mikeosoft.mmd` declaration, so the document entry
 accepts both identifiers rather than trying to redefine the pre-existing type.
 Installing the app through `make install` registers the declarations with Launch Services.
-This enables Finder's **Open With** association and gives Quick Look a stable
-type to dispatch on. Because the type conforms to `public.plain-text`, macOS can
-still fall back to a source-text preview before a custom extension exists.
+This enables Finder's **Open With** association and gives Quick Look stable
+types to dispatch on. Files resolved to the app-owned type can fall back to a
+source-text preview because it conforms to `public.plain-text`. On this Mac,
+however, Spotlight currently resolves `.mmd` to `uk.co.mikeosoft.mmd`, whose
+registered type tree does not advertise that conformance. A useful preview
+therefore should not depend on the generic text fallback.
 
 ## Recommended extension
 
