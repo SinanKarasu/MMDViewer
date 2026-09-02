@@ -14,10 +14,11 @@ target = project.new_target(:application, "MMDViewer", :ios, "26.0")
 group = project.main_group.new_group("MMDViewer", "MMDViewer")
 source = group.new_file("MMDViewerApp.swift")
 group.new_file("MMDViewer.entitlements")
+group.new_file("Info.plist")
 target.source_build_phase.add_file_reference(source)
 
 package = project.new(Xcodeproj::Project::Object::XCLocalSwiftPackageReference)
-package.relative_path = "../../Packages/MMDWorkbench"
+package.relative_path = "../AtlasConcept/Packages/MMDWorkbench"
 project.root_object.package_references << package
 
 product = project.new(Xcodeproj::Project::Object::XCSwiftPackageProductDependency)
@@ -35,7 +36,9 @@ target.build_configurations.each do |configuration|
   settings["CURRENT_PROJECT_VERSION"] = "1"
   settings["DEVELOPMENT_TEAM"] = "4HVP45GV3U"
   settings["ENABLE_APP_SANDBOX"] = "YES"
-  settings["GENERATE_INFOPLIST_FILE"] = "YES"
+  settings["GENERATE_INFOPLIST_FILE"] = "NO"
+  settings["INFOPLIST_FILE"] = "MMDViewer/Info.plist"
+  settings["INFOPLIST_KEY_LSApplicationCategoryType"] = "public.app-category.productivity"
   settings["IPHONEOS_DEPLOYMENT_TARGET"] = "26.0"
   settings["MACOSX_DEPLOYMENT_TARGET"] = "26.0"
   settings["MARKETING_VERSION"] = "1.0"

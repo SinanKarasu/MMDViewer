@@ -13,6 +13,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A5C4A6D9A6945E7A0101001 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DD021AF2E993033D972048A /* MMDViewer.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = MMDViewer.entitlements; sourceTree = "<group>"; };
 		B6A7EB8DB013A1A96EF1BFFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		C9BE27EAA3C232C1DEBCF1F2 /* MMDViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMDViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +38,7 @@
 			children = (
 				E3E17BD555FC2E9A8F1B9EA5 /* MMDViewerApp.swift */,
 				1DD021AF2E993033D972048A /* MMDViewer.entitlements */,
+				0A5C4A6D9A6945E7A0101001 /* Info.plist */,
 			);
 			name = MMDViewer;
 			path = MMDViewer;
@@ -163,7 +165,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4HVP45GV3U;
 				ENABLE_APP_SANDBOX = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MMDViewer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
@@ -256,7 +260,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4HVP45GV3U;
 				ENABLE_APP_SANDBOX = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MMDViewer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
@@ -356,7 +362,7 @@
 /* Begin XCLocalSwiftPackageReference section */
 		EB9B515CFD0AA3A9AFF392DC /* XCLocalSwiftPackageReference "MMDWorkbench" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../Packages/MMDWorkbench;
+			relativePath = ../AtlasConcept/Packages/MMDWorkbench;
 		};
 /* End XCLocalSwiftPackageReference section */
 
