@@ -8,7 +8,7 @@ document window.
 The application is now its own Git project at:
 
 ```text
-/Volumes/GitHubDeveloper/Projects/MMDViewer
+/Volumes/GitHubDeveloper/ProjectsGitHub/MMDViewer
 ```
 
 Xcode resolves [MMDWorkbench](https://github.com/SinanKarasu/MMDWorkbench) from its GitHub `main` branch.
@@ -20,7 +20,7 @@ Swift 6.
 ## Install on this Mac
 
 ```bash
-cd /Volumes/GitHubDeveloper/Projects/MMDViewer
+cd /Volumes/GitHubDeveloper/ProjectsGitHub/MMDViewer
 make install
 ```
 
