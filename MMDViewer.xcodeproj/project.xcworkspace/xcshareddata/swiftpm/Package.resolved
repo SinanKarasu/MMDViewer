@@ -1,0 +1,15 @@
+{
+  "originHash" : "187f1bead268b14b0d5bd12152a7d6a2f4c924d555847729adc22e20a0a71ccd",
+  "pins" : [
+    {
+      "identity" : "mmdworkbench",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SinanKarasu/MMDWorkbench.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "4c5ff9c92ca079f7e44a3d820fa8b7368ebda785"
+      }
+    }
+  ],
+  "version" : 3
+}

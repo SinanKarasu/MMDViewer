@@ -11,9 +11,7 @@ The application is now its own Git project at:
 /Volumes/GitHubDeveloper/Projects/MMDViewer
 ```
 
-`MMDWorkbench` deliberately remains shared with TPS WorkShop in
-`../AtlasConcept/Packages/MMDWorkbench`. Keeping the renderer in one package
-prevents the standalone viewer and the larger workstation from drifting.
+Xcode resolves [MMDWorkbench](https://github.com/SinanKarasu/MMDWorkbench) from its GitHub `main` branch.
 
 The app requires macOS 26 or iPadOS 26 because it uses WebKit's native SwiftUI
 `WebView` and `WebPage` APIs. The project currently builds with Xcode 27 and

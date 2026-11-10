@@ -7,22 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1202636CF8FE4123221B5F70 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCD56664EBB42855F686FBC /* PreviewController.swift */; };
 		25B53A35B4CEA14CFAE5D92F /* MMDViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E17BD555FC2E9A8F1B9EA5 /* MMDViewerApp.swift */; };
+		3AF36611E807CCC4D842E537 /* MMDWorkbench in Frameworks */ = {isa = PBXBuildFile; productRef = 3AE593E61562D09D115C412D /* MMDWorkbench */; };
 		42C562F731532FD3D836212E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6A7EB8DB013A1A96EF1BFFA /* Foundation.framework */; };
+		47AC7B9066353629CBD70D15 /* MMDWorkbench_MMDWorkbench.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDA68E211D1E8C4954C4491D /* MMDWorkbench_MMDWorkbench.bundle */; };
 		4AA81BA8E09CB968F68FDE97 /* MMDWorkbench in Frameworks */ = {isa = PBXBuildFile; productRef = 9178F60EF272D44FAE25999C /* MMDWorkbench */; };
+		4F54EB3634953556BFAA8C9F /* ThumbnailProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BB4CD5B88AB321E3B92F23 /* ThumbnailProvider.swift */; };
+		5966AD840443B9FB3D9A809A /* MMDQuickLookPreview.appex in Embed Quick Look Extensions */ = {isa = PBXBuildFile; fileRef = E4A458706E963A3B08E656AD /* MMDQuickLookPreview.appex */; platformFilters = (macos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6F1EDA280AB89CD95326284B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21411FB5BFCBFCE56A2D2AB4 /* Cocoa.framework */; };
+		7AC12FB9F9066B0C521853CA /* MMDQuickLookThumbnail.appex in Embed Quick Look Extensions */ = {isa = PBXBuildFile; fileRef = AFAD2876FA0D4661DF2E7433 /* MMDQuickLookThumbnail.appex */; platformFilters = (macos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A33FCB718AFC56312F7B3D26 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21411FB5BFCBFCE56A2D2AB4 /* Cocoa.framework */; };
 		F7A8795830A3940F0092F848 /* MMDViewer.icon in Resources */ = {isa = PBXBuildFile; fileRef = F7A8795730A393140092F848 /* MMDViewer.icon */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2E74905E6AD8804B6D17ADCA /* Embed Quick Look Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5966AD840443B9FB3D9A809A /* MMDQuickLookPreview.appex in Embed Quick Look Extensions */,
+				7AC12FB9F9066B0C521853CA /* MMDQuickLookThumbnail.appex in Embed Quick Look Extensions */,
+			);
+			name = "Embed Quick Look Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0A5C4A6D9A6945E7A0101001 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		108B49C74B43A096360AC11B /* QuickLook.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = QuickLook.entitlements; sourceTree = "<group>"; };
 		1DD021AF2E993033D972048A /* MMDViewer.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = MMDViewer.entitlements; sourceTree = "<group>"; };
+		21411FB5BFCBFCE56A2D2AB4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		652EEB7E1DFD5E2D54A772CD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BCD56664EBB42855F686FBC /* PreviewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PreviewController.swift; sourceTree = "<group>"; };
+		AFAD2876FA0D4661DF2E7433 /* MMDQuickLookThumbnail.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MMDQuickLookThumbnail.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6A7EB8DB013A1A96EF1BFFA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BE3FD5BC00C2C683064BA976 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8BB4CD5B88AB321E3B92F23 /* ThumbnailProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThumbnailProvider.swift; sourceTree = "<group>"; };
 		C9BE27EAA3C232C1DEBCF1F2 /* MMDViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMDViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA68E211D1E8C4954C4491D /* MMDWorkbench_MMDWorkbench.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = MMDWorkbench_MMDWorkbench.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E17BD555FC2E9A8F1B9EA5 /* MMDViewerApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMDViewerApp.swift; sourceTree = "<group>"; };
+		E4A458706E963A3B08E656AD /* MMDQuickLookPreview.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MMDQuickLookPreview.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A8795730A393140092F848 /* MMDViewer.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = MMDViewer.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2EF4BDB72F830EBE7119DF55 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F1EDA280AB89CD95326284B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3CB65CC667AD41CAF50B3548 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33FCB718AFC56312F7B3D26 /* Cocoa.framework in Frameworks */,
+				3AF36611E807CCC4D842E537 /* MMDWorkbench in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F455A91D99CA57F671C4669A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,8 +99,32 @@
 			isa = PBXGroup;
 			children = (
 				C9BE27EAA3C232C1DEBCF1F2 /* MMDViewer.app */,
+				E4A458706E963A3B08E656AD /* MMDQuickLookPreview.appex */,
+				AFAD2876FA0D4661DF2E7433 /* MMDQuickLookThumbnail.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		23C675A52F65238D601DD76B /* Thumbnail */ = {
+			isa = PBXGroup;
+			children = (
+				652EEB7E1DFD5E2D54A772CD /* Info.plist */,
+				C8BB4CD5B88AB321E3B92F23 /* ThumbnailProvider.swift */,
+			);
+			name = Thumbnail;
+			path = Thumbnail;
+			sourceTree = "<group>";
+		};
+		48844993BF09AC956502F586 /* QuickLook */ = {
+			isa = PBXGroup;
+			children = (
+				108B49C74B43A096360AC11B /* QuickLook.entitlements */,
+				8B3E44864D006A74540CD308 /* Preview */,
+				23C675A52F65238D601DD76B /* Thumbnail */,
+				CDA68E211D1E8C4954C4491D /* MMDWorkbench_MMDWorkbench.bundle */,
+			);
+			name = QuickLook;
+			path = QuickLook;
 			sourceTree = "<group>";
 		};
 		6242D02BAD24988818E08CDF /* iOS */ = {
@@ -66,8 +139,27 @@
 			isa = PBXGroup;
 			children = (
 				6242D02BAD24988818E08CDF /* iOS */,
+				83081B74F558DFA131625DA2 /* OS X */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83081B74F558DFA131625DA2 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				21411FB5BFCBFCE56A2D2AB4 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		8B3E44864D006A74540CD308 /* Preview */ = {
+			isa = PBXGroup;
+			children = (
+				BE3FD5BC00C2C683064BA976 /* Info.plist */,
+				6BCD56664EBB42855F686FBC /* PreviewController.swift */,
+			);
+			name = Preview;
+			path = Preview;
 			sourceTree = "<group>";
 		};
 		FCB82C5BC97E26BD10B21FF5 = {
@@ -76,6 +168,7 @@
 				20EFE9009E6DC84507B90570 /* Products */,
 				7CDDCA89D09E6BCEEB67DE88 /* Frameworks */,
 				0D9AAF8D70C1B601B69F99C3 /* MMDViewer */,
+				48844993BF09AC956502F586 /* QuickLook */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +182,7 @@
 				1FCC476401E4D5DED9E9367B /* Sources */,
 				F455A91D99CA57F671C4669A /* Frameworks */,
 				0319CA3785C6AAB2CFFC4261 /* Resources */,
+				2E74905E6AD8804B6D17ADCA /* Embed Quick Look Extensions */,
 			);
 			buildRules = (
 			);
@@ -101,6 +195,43 @@
 			productName = MMDViewer;
 			productReference = C9BE27EAA3C232C1DEBCF1F2 /* MMDViewer.app */;
 			productType = "com.apple.product-type.application";
+		};
+		72119767E32DA731F8F8EA6C /* MMDQuickLookPreview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B82F6D3C30E915FBE439BA1 /* Build configuration list for PBXNativeTarget "MMDQuickLookPreview" */;
+			buildPhases = (
+				EA4B8DBC2BF6419F623277E4 /* Sources */,
+				3CB65CC667AD41CAF50B3548 /* Frameworks */,
+				F879A3B03F43300343B38935 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MMDQuickLookPreview;
+			packageProductDependencies = (
+				3AE593E61562D09D115C412D /* MMDWorkbench */,
+			);
+			productName = MMDQuickLookPreview;
+			productReference = E4A458706E963A3B08E656AD /* MMDQuickLookPreview.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		7A4AB4BE180D2F18E7259544 /* MMDQuickLookThumbnail */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89811D3B81BF82EC29802051 /* Build configuration list for PBXNativeTarget "MMDQuickLookThumbnail" */;
+			buildPhases = (
+				5BDEE3A5337FBC8AAEC3540E /* Sources */,
+				2EF4BDB72F830EBE7119DF55 /* Frameworks */,
+				9D4BF053D98E0C4F3C88AE8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MMDQuickLookThumbnail;
+			productName = MMDQuickLookThumbnail;
+			productReference = AFAD2876FA0D4661DF2E7433 /* MMDQuickLookThumbnail.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -121,13 +252,15 @@
 			);
 			mainGroup = FCB82C5BC97E26BD10B21FF5;
 			packageReferences = (
-				EB9B515CFD0AA3A9AFF392DC /* XCLocalSwiftPackageReference "../AtlasConcept/Packages/MMDWorkbench" */,
+				EB9B515CFD0AA3A9AFF392DC /* XCRemoteSwiftPackageReference "MMDWorkbench" */,
 			);
 			productRefGroup = 20EFE9009E6DC84507B90570 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				0FD52ED3F4717A43F3EE6FA9 /* MMDViewer */,
+				72119767E32DA731F8F8EA6C /* MMDQuickLookPreview */,
+				7A4AB4BE180D2F18E7259544 /* MMDQuickLookThumbnail */,
 			);
 		};
 /* End PBXProject section */
@@ -138,6 +271,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7A8795830A3940F0092F848 /* MMDViewer.icon in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D4BF053D98E0C4F3C88AE8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F879A3B03F43300343B38935 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47AC7B9066353629CBD70D15 /* MMDWorkbench_MMDWorkbench.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,9 +300,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5BDEE3A5337FBC8AAEC3540E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F54EB3634953556BFAA8C9F /* ThumbnailProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA4B8DBC2BF6419F623277E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1202636CF8FE4123221B5F70 /* PreviewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		03F1D4B034E51684BF013681 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = QuickLook/QuickLook.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4HVP45GV3U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuickLook/Thumbnail/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinankarasu.MMDViewer.QuickLookThumbnail;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
 		2E8C143C40275A4987F7F064 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -191,6 +375,46 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		5AFEB74238D10A8917FCAF9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = QuickLook/QuickLook.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4HVP45GV3U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuickLook/Thumbnail/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinankarasu.MMDViewer.QuickLookThumbnail;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		5D49CBD121A3527E72C9A603 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = QuickLook/QuickLook.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4HVP45GV3U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuickLook/Preview/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinankarasu.MMDViewer.QuickLookPreview;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
 		};
 		87474BD063FFB30BD0881B70 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -289,6 +513,26 @@
 			};
 			name = Debug;
 		};
+		C05662A61373A6E1A98B0E3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = QuickLook/QuickLook.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4HVP45GV3U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QuickLook/Preview/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sinankarasu.MMDViewer.QuickLookPreview;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
 		D164214CC618A942A576611F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -355,6 +599,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		7B82F6D3C30E915FBE439BA1 /* Build configuration list for PBXNativeTarget "MMDQuickLookPreview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C05662A61373A6E1A98B0E3B /* Release */,
+				5D49CBD121A3527E72C9A603 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89811D3B81BF82EC29802051 /* Build configuration list for PBXNativeTarget "MMDQuickLookThumbnail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AFEB74238D10A8917FCAF9E /* Release */,
+				03F1D4B034E51684BF013681 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F30C7BE5A30203E58A70F45A /* Build configuration list for PBXNativeTarget "MMDViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -366,17 +628,26 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		EB9B515CFD0AA3A9AFF392DC /* XCLocalSwiftPackageReference "../AtlasConcept/Packages/MMDWorkbench" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../AtlasConcept/Packages/MMDWorkbench;
+/* Begin XCRemoteSwiftPackageReference section */
+		EB9B515CFD0AA3A9AFF392DC /* XCRemoteSwiftPackageReference "MMDWorkbench" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SinanKarasu/MMDWorkbench.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3AE593E61562D09D115C412D /* MMDWorkbench */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB9B515CFD0AA3A9AFF392DC /* XCRemoteSwiftPackageReference "MMDWorkbench" */;
+			productName = MMDWorkbench;
+		};
 		9178F60EF272D44FAE25999C /* MMDWorkbench */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EB9B515CFD0AA3A9AFF392DC /* XCLocalSwiftPackageReference "../AtlasConcept/Packages/MMDWorkbench" */;
+			package = EB9B515CFD0AA3A9AFF392DC /* XCRemoteSwiftPackageReference "MMDWorkbench" */;
 			productName = MMDWorkbench;
 		};
 /* End XCSwiftPackageProductDependency section */

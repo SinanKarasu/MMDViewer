@@ -17,8 +17,9 @@ group.new_file("MMDViewer.entitlements")
 group.new_file("Info.plist")
 target.source_build_phase.add_file_reference(source)
 
-package = project.new(Xcodeproj::Project::Object::XCLocalSwiftPackageReference)
-package.relative_path = "../AtlasConcept/Packages/MMDWorkbench"
+package = project.new(Xcodeproj::Project::Object::XCRemoteSwiftPackageReference)
+package.repositoryURL = "https://github.com/SinanKarasu/MMDWorkbench.git"
+package.requirement = { "kind" => "branch", "branch" => "main" }
 project.root_object.package_references << package
 
 product = project.new(Xcodeproj::Project::Object::XCSwiftPackageProductDependency)
@@ -57,6 +58,53 @@ target.build_configurations.each do |configuration|
   settings["INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad"] = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
 end
 
+def add_quick_look(project, app)
+  root = project.main_group.new_group('QuickLook', 'QuickLook')
+  root.new_file('QuickLook.entitlements')
+  embed = app.new_copy_files_build_phase('Embed Quick Look Extensions')
+  embed.dst_subfolder_spec = '13'
+  { 'Preview' => 'PreviewController', 'Thumbnail' => 'ThumbnailProvider' }.each do |folder, source|
+    name = "MMDQuickLook#{folder}"
+    target = project.new_target(:app_extension, name, :osx, '26.0')
+    group = root.new_group(folder, folder)
+    group.new_file('Info.plist')
+    target.source_build_phase.add_file_reference(group.new_file("#{source}.swift"))
+    target.build_configurations.each do |config|
+      settings = config.build_settings
+      settings.merge!({
+        'APPLICATION_EXTENSION_API_ONLY' => 'YES',
+        'CODE_SIGN_ENTITLEMENTS' => 'QuickLook/QuickLook.entitlements',
+        'CODE_SIGN_STYLE' => 'Automatic',
+        'CURRENT_PROJECT_VERSION' => '1',
+        'DEVELOPMENT_TEAM' => '4HVP45GV3U',
+        'GENERATE_INFOPLIST_FILE' => 'YES',
+        'INFOPLIST_FILE' => "QuickLook/#{folder}/Info.plist",
+        'MARKETING_VERSION' => '1.0',
+        'PRODUCT_BUNDLE_IDENTIFIER' => "com.sinankarasu.MMDViewer.QuickLook#{folder}",
+        'SKIP_INSTALL' => 'YES',
+        'SUPPORTED_PLATFORMS' => 'macosx',
+        'SWIFT_VERSION' => '6.0'
+      })
+    end
+    if folder == 'Preview'
+      product = project.new(Xcodeproj::Project::Object::XCSwiftPackageProductDependency)
+      product.package = project.root_object.package_references.first
+      product.product_name = 'MMDWorkbench'
+      target.package_product_dependencies << product
+      framework = project.new(Xcodeproj::Project::Object::PBXBuildFile)
+      framework.product_ref = product
+      target.frameworks_build_phase.files << framework
+      bundle = root.new_file('MMDWorkbench_MMDWorkbench.bundle', 'BUILT_PRODUCTS_DIR')
+      bundle.explicit_file_type = 'wrapper.cfbundle'
+      target.resources_build_phase.add_file_reference(bundle)
+    end
+    file = embed.add_file_reference(target.product_reference, true)
+    file.settings = { 'ATTRIBUTES' => ['RemoveHeadersOnCopy'] }
+    file.platform_filters = ['macos']
+  end
+end
+
+add_quick_look(project, target)
 project.save
 
 scheme = Xcodeproj::XCScheme.new
