@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7218C650000000000000001 /* Examples in Resources */ = {isa = PBXBuildFile; fileRef = F7218C650000000000000002 /* Examples */; };
 		1202636CF8FE4123221B5F70 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCD56664EBB42855F686FBC /* PreviewController.swift */; };
 		25B53A35B4CEA14CFAE5D92F /* MMDViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E17BD555FC2E9A8F1B9EA5 /* MMDViewerApp.swift */; };
 		3AF36611E807CCC4D842E537 /* MMDWorkbench in Frameworks */ = {isa = PBXBuildFile; productRef = 3AE593E61562D09D115C412D /* MMDWorkbench */; };
@@ -37,6 +38,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F7218C650000000000000002 /* Examples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Examples; sourceTree = "<group>"; };
 		0A5C4A6D9A6945E7A0101001 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		108B49C74B43A096360AC11B /* QuickLook.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = QuickLook.entitlements; sourceTree = "<group>"; };
 		1DD021AF2E993033D972048A /* MMDViewer.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = MMDViewer.entitlements; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				F7A8795730A393140092F848 /* MMDViewer.icon */,
 				E3E17BD555FC2E9A8F1B9EA5 /* MMDViewerApp.swift */,
+				F7218C650000000000000002 /* Examples */,
 				1DD021AF2E993033D972048A /* MMDViewer.entitlements */,
 				0A5C4A6D9A6945E7A0101001 /* Info.plist */,
 			);
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7A8795830A3940F0092F848 /* MMDViewer.icon in Resources */,
+				F7218C650000000000000001 /* Examples in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

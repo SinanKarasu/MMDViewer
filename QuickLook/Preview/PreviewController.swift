@@ -33,6 +33,8 @@ final class PreviewController: QLPreviewProvider, QLPreviewingController {
         <style>
         :root { color-scheme: light dark; }
         body { font: 16px/1.55 system-ui; margin: 32px auto; padding: 0 28px; max-width: 840px; }
+        /* Mathpix emits plain paragraphs as unclassed divs. */
+        #setText > div:not([class], [id]) + div:not([class], [id]) { margin-top: 0.75em; }
         img { max-width: 100%; height: auto; } pre { overflow: auto; }
         table { border-collapse: collapse; } td, th { border: 1px solid GrayText; padding: .3em .6em; }
         </style></head><body>\(notice)\(images.html)</body></html>
@@ -51,7 +53,7 @@ final class PreviewController: QLPreviewProvider, QLPreviewingController {
         context.evaluateScript("var window = {}; var setTimeout = () => 0; var clearTimeout = () => {}; var setInterval = setTimeout; var clearInterval = clearTimeout;")
         context.evaluateScript(try String(contentsOf: rendererURL, encoding: .utf8), withSourceURL: rendererURL)
         guard let renderer = context.evaluateScript("window.render"), !renderer.isUndefined,
-              let result = renderer.call(withArguments: [source, ["htmlTags": false, "breaks": true]]),
+              let result = renderer.call(withArguments: [source, ["htmlTags": false, "breaks": false]]),
               result.isString, let html = result.toString()
         else {
             let detail = context.exception?.toString() ?? "The Mathpix renderer did not return HTML."

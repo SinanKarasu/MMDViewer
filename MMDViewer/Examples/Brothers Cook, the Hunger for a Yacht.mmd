@@ -1,0 +1,166 @@
+# On the Fractional Optimization of Culinary Labor: A Dinkelbach-Theoretic Path from Sauté Pan to Sports Car
+
+*The Brother with the Yacht*\
+October 16, 2026
+
+## Abstract
+
+We prove that an exceptional cook can afford a sports car in under three months and a yacht in about two and a half years, using nothing but a ratio and some optimism. We model the diner’s choice as the fractional program min f /g, where f is the cook’s hourly fee and g is the Gastronomic Output: plates per hour weighted by aroma, taste and satisfaction. Solving with Dinkelbach’s method, we show the market fixes a price per Delicious Unit (DU), so a cook’s income scales with g rather than with effort, sweat, or the number of times they say “yes, chef.” Adding the Stomach Capacity Constraint produces a superstar premium, lifting our exceptional cook from \$25 to roughly \$1,023 per hour. Results hold under standard assumptions, all of which are wrong.
+
+## 1. Introduction
+
+The central question of culinary economics is simple: why does one cook earn \$25 an hour while another arrives at work in something Italian with a V12? Prior literature attributes this to “talent,” “years of training,” and “knowing a guy.” We find these explanations unsatisfying because none of them contains a fraction.
+
+Our contribution is to recognize that every diner, consciously or not, is solving a ratio: how much deliciousness am I buying per dollar? Ratios of this kind are fractional programs, whose classical tool is Dinkelbach’s method [1]. Once the diner’s problem is written down, the cook’s path to a yacht follows by straightforward algebra and moderately reckless extrapolation.
+
+Section 2 defines the model. Section 3 solves it. Section 4 states the Exceptional Cook Theorem and its nautical corollary. Section 5 puts numbers on everything. Section 6 apologizes.
+
+## 2. The Model
+
+A market contains cooks indexed by i. Each cook is described by a skill vector x = (Q, A, T, S), where Q is plates per hour, A is aroma, T is taste and S is satisfaction (the post-meal sigh, measured in decibels of contentment). A, T and S are scored relative to an average cook, so the average cook has A = T = S = 1.
+
+**Numerator.** The cook’s hourly fee is f (x), in dollars per hour. This is the quantity the cook would like to be large and the diner would like to be small, which is the source of all tension in kitchens and most of it on Yelp.
+
+**Denominator.** The Gastronomic Output Function measures deliciousness produced per hour, in Delicious Units (DU):
+
+$$
+g(x)=Q\cdot A^a T^t S^s,\qquad a+t+s=1,\quad a,t,s>0. \tag{1}
+$$
+
+The product of the last three factors is the Hedonic Multiplier H(A, T, S). We calibrate a = 0.3, t = 0.5, s = 0.2, reflecting the empirical observation that taste matters most, aroma gets you through the door, and satisfaction is what makes you lie down afterward. Cobb–Douglas form [3] is chosen because it is concave, differentiable, and the only functional form economists are legally permitted to use.
+
+**The diner’s problem.** A rational diner hires the cook offering the cheapest deliciousness:
+
+$$
+\lambda^*=\min_i\frac{f(x_i)}{g(x_i)}\quad\text{subject to }g(x_i)>0. \tag{2}
+$$
+
+The constraint g > 0 excludes cooks whose food has negative deliciousness, a set that is nonempty, as anyone who has eaten airport sushi can attest. The optimal value λ∗ is the market price of deliciousness, in dollars per DU.
+
+## 3. Solution by Dinkelbach’s Method
+
+Ratios are awkward to optimize directly, so we trade the ratio for a parametric difference. For a trial price λ, define
+
+$$
+F(\lambda)=\min_i\bigl[f(x_i)-\lambda g(x_i)\bigr]. \tag{3}
+$$
+
+F (λ) is the best deal available if deliciousness were priced at λ dollars per DU. Because g > 0, F is continuous and strictly decreasing in λ: the more you value flavor, the more every cook looks like a bargain.
+
+**Lemma 1 (Dinkelbach, 1967).** λ∗ is optimal if and only if F (λ∗ ) = 0, and the minimizing cook at λ∗ solves the original fractional program.
+
+**Proof sketch.** If F (λ∗ ) = 0, then \(f(x_i)\) − λ∗ \(g(x_i)\) ≥ 0 for every cook, so f /g ≥ λ∗ everywhere, with equality at the minimizer. The converse is the same argument read aloud backward, preferably with a glass of wine.
+
+**Algorithm.** Start from any cook i0 and set λ0 = \(f(x_{i_0})/g(x_{i_0})\). Then repeat:
+
+1. Find the cook minimizing f − λk g.
+
+2. Set \(\lambda_{k+1}\) = f /g for that cook.
+
+3. Stop when F (λk ) = 0, or when dinner gets cold, whichever comes first.
+
+The iteration converges superlinearly, which is faster than most restaurant service.
+
+**Interpretation.** At the optimum every cook satisfies \(f(x_i)\) ≥ λ∗ \(g(x_i)\). Cooks charging more than λ∗ g lose customers; cooks charging less are leaving money on the cutting board. Competition pushes every fee to the frontier:
+
+$$
+f(x_i)=\lambda^*g(x_i). \tag{4}
+$$
+
+This is the key result of the paper. **Your hourly fee is the market price of deliciousness times the deliciousness you produce.** Hours of effort, the burn scars on your forearms, and your feelings about cilantro do not appear in the formula.
+
+## 4. The Exceptional Cook Theorem
+
+Equation (4) says income is linear in g. That is good news, but linear growth buys a nice sedan, not a yacht. Yachts require convexity. We find it in the diner’s stomach.
+
+**Assumption 1 (Stomach Capacity Constraint).** Each diner can eat at most q̄ plates per evening, regardless of price. The diner therefore cannot replace one exceptional meal with three average ones, however much the spreadsheet suggests it.
+
+Under this constraint the diner maximizes deliciousness per plate, not per dollar, and cooks with a high Hedonic Multiplier become scarce. Following Rosen’s economics of superstars [2], the price of deliciousness rises with quality:
+
+$$
+\lambda(g)=\lambda_m\left(\frac{g}{\bar g}\right)^\eta,\qquad \eta>0. \tag{5}
+$$
+
+where λm is the price set by the average cook, ḡ is average output, and η is the Superstar Elasticity, calibrated at 0.5, roughly the point at which reservations require knowing someone.
+
+**Theorem 1 (Exceptional Cook).** A cook whose output is k times the average, g = kḡ, earns
+
+$$
+f=\lambda_m\bar g\,k^{1+\eta}. \tag{6}
+$$
+
+so fees grow faster than skill. Doubling your deliciousness multiplies your fee by \(2^{1.5}\approx2.83\).
+
+**Proof.** Substitute λ(g) into f = λg and simplify. The authors spent four days on this step, mostly at lunch.
+
+**Corollary 1 (The Yacht Condition).** Let Pc and Py be the prices of a sports car and a yacht, H the hours worked per year, τ the tax rate, E annual living costs, and m the yacht’s annual upkeep as a share of its price. The cook can buy both, and keep the yacht afloat, if and only if
+
+$$
+fH(1-\tau)-E-mP_y\ge0, \tag{7}
+$$
+
+and the time to purchase both is
+
+$$
+T_{\mathrm{yacht}}=\frac{P_c+P_y}{fH(1-\tau)-E}\ \text{years}. \tag{8}
+$$
+
+The upkeep term \(mP_y\) is the part most yacht owners discover after purchase. We include it before purchase, which is the paper’s main practical contribution.
+
+## 5. Numerical Example
+
+Our exceptional cook earns about \$1,023 per hour, buys the sports car in 2.8 months, and owns the yacht 2.55 years after the first shift. The average cook reaches the same fleet in roughly 1,100 years.
+
+**Calibration.** The average cook plates Q = 10 dishes per hour at A = T = S = 1, so ḡ = 10 DU/h. At \$25 per hour, λm = \$2.50/DU. Our exceptional cook is faster (Q = 15) and far better: aroma 4, taste 9, satisfaction 16, where 16 means diners have been observed texting their mothers about the risotto.
+
+**Output.** The Hedonic Multiplier is \(4^{0.3}\times9^{0.5}\times16^{0.2}\approx1.52\times3\times1.74\approx7.92\), so
+
+$$
+g=15\times7.92\approx118.8\,\mathrm{DU/h},\qquad k=\frac{118.8}{10}\approx11.9. \tag{9}
+$$
+
+**Fees.** On the plain frontier, f = \$2.50 × 118.8 ≈ \$297/h, already a 12-fold raise. With the superstar premium (η = 0.5),
+
+$$
+f=2.50\times10\times11.9^{1.5}\approx\$1{,}023\text{ per hour}. \tag{10}
+$$
+
+**The fleet.** We assume 2,000 working hours a year, a sports car at \$250,000, a yacht at \$2.5 million, and upkeep of 10% of the yacht’s price per year.
+
+| Quantity | Average cook | Exceptional cook |
+| --- | --- | --- |
+| Gastronomic Output (DU/h) | 10 | 118.8 |
+| Hourly fee ($) | 25 | 1,023 |
+| Tax rate / living costs | 15% / \$40k | 40% / \$150k |
+| Annual savings ($) | 2,500 | 1,077,700 |
+| Time to sports car | 100 years | 2.8 months |
+| Time to sports car + yacht | 1,100 years | 2.55 years |
+| Yacht Condition ($/yr after upkeep) | −247,500 (fails) | +827,700 (holds) |
+
+*Table 1: The fleet, computed.*
+
+The Yacht Condition holds with a comfortable margin, leaving \$827,700 a year for fuel, a second yacht, or a modest restaurant named after oneself. For the average cook it fails by \$247,500 a year, and the yacht sinks, both financially and, after 1,100 years without maintenance, literally.
+
+## 6. Limitations and Conclusion
+
+The math is sound; the kitchen is not.
+
+- **Measurement.** No instrument yet measures satisfaction in decibels of contentment. Early prototypes measured only the volume of “mmm,” which is easily gamed by enthusiastic uncles.
+
+- **Hours.** We assume 2,000 billable hours a year. Real cooks work closer to 3,000, most of them unbillable and many spent looking for the good tongs.
+
+- **Scale.** Fees grow without limit in k. In practice the curve flattens when the cook opens a second restaurant whose Hedonic Multiplier is 3.
+
+- **Yacht dynamics.** Yacht owners report that 10% upkeep is optimistic, and that the true formula is “yes.”
+
+Despite these caveats, the central result stands. A diner solving min f /g pays a fixed price per Delicious Unit, so a cook’s income is set by the deliciousness produced, not the hours suffered. Add a finite stomach and that relationship turns convex, which is where sports cars and yachts come from. Our advice to aspiring cooks is rigorous and simple: raise g. The fraction will take care of the rest.
+
+## References
+
+1. W. Dinkelbach. On nonlinear fractional programming. Management Science, 13(7):492–498, 1967.
+
+2. S. Rosen. The economics of superstars. American Economic Review, 71(5):845–858, 1981.
+
+3. C. W. Cobb and P. H. Douglas. A theory of production. American Economic Review, 18(1):139–165, 1928.
+
+4. Anonymous Grandmother. Unpublished recipe, “a little of this, a little of that.” Private collection, never shared, undated.

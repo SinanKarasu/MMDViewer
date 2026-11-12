@@ -16,6 +16,9 @@ source = group.new_file("MMDViewerApp.swift")
 group.new_file("MMDViewer.entitlements")
 group.new_file("Info.plist")
 target.source_build_phase.add_file_reference(source)
+examples = group.new_file("Examples")
+examples.last_known_file_type = "folder"
+target.resources_build_phase.add_file_reference(examples)
 
 package = project.new(Xcodeproj::Project::Object::XCRemoteSwiftPackageReference)
 package.repositoryURL = "https://github.com/SinanKarasu/MMDWorkbench.git"

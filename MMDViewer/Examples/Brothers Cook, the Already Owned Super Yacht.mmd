@@ -1,0 +1,115 @@
+# Comment on “On the Fractional Optimization of Culinary Labor”: A Charnes–Cooper Rebuttal, or Why My Brother’s Yacht Is Adorable
+
+*The Brother with the Superyacht*\
+October 16, 2026
+
+## Abstract
+
+A recent paper by the author’s brother [1] shows that an exceptional cook can earn \$1,023 an hour and buy a yacht in 2.55 years. We congratulate him and identify one small error: his denominator. By measuring output per hour at the stove, he bounds income by the speed of his own two hands. We reformulate the cook’s problem as income per hour of the cook’s own labor, with output produced in licensed kitchens that replicate the Hedonic Multiplier at a distance. The resulting fractional program is solved by the Charnes–Cooper transformation and Schaible’s convex extension. The optimum yields \$7,993 per hour of the author’s time, a 60-meter superyacht in 4.36 years, and the surprising result that the optimal amount of cooking for the better cook is zero.
+
+## 1. Introduction
+
+The author’s brother asks why one cook earns \$25 an hour while another drives a V12 [1]. His answer, that income equals the price of deliciousness times deliciousness produced, is correct. It is also small. A yacht is a fine thing. But a yacht is the vessel one admires from the deck of a superyacht.
+
+The limitation is structural. In [1], Gastronomic Output is g = Q · H(A, T, S), where Q is plates per hour. However exceptional the brother’s Hedonic Multiplier, Q is capped by physiology: one cook, two hands, a finite number of pans, and a tendency to stop for lunch. Income per stove-hour is therefore bounded, and so is the boat.
+
+We propose a different denominator. The scarce resource is not hours at the stove but hours of the cook’s attention. A cook who licenses recipes, technique and name to other kitchens produces deliciousness in many places at once, at the cost of a few hours per kitchen per year spent tasting, approving and raising one’s voice. Section 2 formalizes this. Section 3 solves it with a transformation that has a name, which is how one knows it is serious. Section 4 computes the superyacht.
+
+## 2. The Leverage Model
+
+The cook allocates a yearly time budget of H̄ = 2,000 hours between two activities:
+
+- Cooking, hk hours at the brother’s frontier fee f = \$1,023 per hour [1].
+
+- Licensing, operating N kitchens under the cook’s name, each costing hm = 25 hours of the cook’s oversight per year.
+
+**Assumption 1 (Brand Dilution).** A licensed kitchen cannot fully reproduce the original. Each kitchen’s annual revenue is R(N ) = \(R_0N^{-\delta}\), with flagship-grade revenue R0 = \$8 million and dilution elasticity δ = 0.2. At N = 80, each kitchen retains \(80^{-0.2}\) ≈ 42% of the original’s revenue. The risotto at location 80 is merely very good.
+
+The cook collects a royalty ρ = 6% of revenue. Royalty income is \(\rho R_0N^{1-\delta}\), which is concave in N . The cook’s problem is to maximize income per hour of own labor:
+
+$$
+\Phi^*=\max_{h_k,N\ge0}\frac{fh_k+\rho R_0N^{1-\delta}}{h_k+h_mN}\quad\text{s.t. }h_k+h_mN=\bar H. \tag{1}
+$$
+
+**Remark 1 (The Lazy Optimum).** Without the equality constraint, the ratio in (1) is maximized as N → 0 with hk = 0, where the hourly rate on a vanishing sliver of a kitchen grows without bound. The author rejects this solution on the grounds that the length of a yacht is not a ratio. The constraint hk + hm N = H̄, known in the author’s family as the Mother Constraint (“you will work full-time”), restores sanity.
+
+## 3. Solution by Charnes–Cooper Transformation
+
+The brother used Dinkelbach’s method [4], which solves a fractional program by iterating on a guessed ratio. We prefer the Charnes–Cooper transformation [2], which removes the ratio in one step. Define the scaling variable
+
+$$
+t=\frac{1}{h_k+h_mN},\qquad y=th_k,\qquad z=tN. \tag{2}
+$$
+
+For linear numerators this converts (1) into a linear program. Our numerator is concave, so we invoke Schaible’s extension [3], which yields an equivalent convex program whenever a concave numerator sits over a positive affine denominator, as ours does.
+
+Under the Mother Constraint, t = 1/H̄ = 1/2,000, and the transformation reduces to dividing by 2,000. We describe it at length anyway, because it has a name.
+
+**Proposition 1 (Corner Solution).** The optimum of (1) is \(h_k^*=0\) and \(N^*=\bar H/h_m=80\): the cook does not cook.
+
+**Proof.** Substitute hk = H̄ − hm N . The marginal income from one more hour moved into licensing is
+
+$$
+\frac{(1-\delta)\rho R_0N^{-\delta}}{h_m}-f. \tag{3}
+$$
+
+At N = 80 this is 0.8 × 480,000 × \(80^{-0.2}\) /25 − 1,023 ≈ 6,394 − 1,023 > 0. It is decreasing in N and would reach zero only at N ≈ 763,000 kitchens, which exceeds the time budget by a factor of nearly ten thousand and the number of restaurants in most countries. The constraint binds first, so all hours go to licensing.
+
+**Theorem 1 (Leverage).** The optimal income per hour of own labor is
+
+$$
+\Phi^*=\frac{\rho R_0}{\bar H}\left(\frac{\bar H}{h_m}\right)^{1-\delta}=\frac{480{,}000\times80^{0.8}}{2{,}000}\approx\$7{,}993\text{ per hour}, \tag{4}
+$$
+
+or 7.8 times the brother’s rate.
+
+**Corollary 1 (The Superyacht Condition).** Applying the brother’s Yacht Condition [1] with superyacht price Psy and upkeep share m, the superyacht is affordable and stays afloat if and only if
+
+$$
+\Phi^*\bar H(1-\tau)-E-mP_{\mathrm{sy}}\ge0. \tag{5}
+$$
+
+## 4. Numerical Results
+
+We take a 60-meter superyacht at \$40 million with upkeep of 10% per year (\$4 million), two sports cars at \$250,000 each (one per driveway), a 40% tax rate, and \$300,000 of annual living costs, which include a helipad. Royalty income is \(480{,}000\times80^{0.8}\) ≈ \$15.99 million a year. After tax and living costs, savings are \$9.29 million a year.
+
+| Quantity | The brother [1] | The author |
+| --- | --- | --- |
+| Denominator | hours at the stove | hours of attention |
+| Hours spent cooking per year | 2,000 | 0 |
+| Kitchens | 1 | 80 |
+| Income per own hour ($) | 1,023 | 7,993 |
+| Annual savings ($) | 1,077,700 | 9,291,000 |
+| Vessel | yacht, \$2.5M | superyacht, \$40M |
+| Time to cars + vessel | 2.55 years | 4.36 years |
+| Margin after upkeep ($/yr) | +827,700 | +5,291,000 |
+
+*Table 1: Comparative fleet analysis.*
+
+The author concedes that his brother reaches the water first, by 1.8 years. The author arrives later, in a vessel whose tender is longer than his brother’s yacht, and moors alongside it in a manner that places it in shade for most of the afternoon.
+
+## 5. Limitations and Disclosure
+
+- **Conflict of interest.** The flagship whose Hedonic Multiplier the 80 kitchens replicate is staffed by the author’s brother, at \$1,023 an hour, cooking from recipes the author licenses. This is disclosed both as a conflict of interest and as the business plan.
+
+- **Dilution risk.** If δ exceeds 0.2, location 80 begins serving food the brother’s paper classifies as airport sushi, and the royalty base collapses.
+
+- The Mother Constraint is binding in the model and, the author can confirm, in life.
+
+- **Robustness.** The corner solution survives any royalty, revenue and oversight time for which a licensed kitchen hour beats \$1,023. The author has not checked what happens otherwise, as it would not end in a superyacht.
+
+The brother’s paper teaches cooks to raise g. This paper teaches them to change the denominator. Both lead to the water. Only one requires a crew.
+
+## References
+
+1. The Brother with the Yacht. On the fractional optimization of culinary labor: A Dinkelbach-theoretic path from sauté pan to sports car. Working paper, October 2026.
+
+2. A. Charnes and W. W. Cooper. Programming with linear fractional functionals. Naval Research
+
+Logistics Quarterly, 9(3–4):181–186, 1962.
+
+3. S. Schaible. Parameter-free convex equivalent and dual programs of fractional programming problems. Zeitschrift für Operations Research, 18:187–196, 1974.
+
+4. W. Dinkelbach. On nonlinear fractional programming. Management Science, 13(7):492–498, 1967.
+
+5. S. Rosen. The economics of superstars. American Economic Review, 71(5):845–858, 1981.
