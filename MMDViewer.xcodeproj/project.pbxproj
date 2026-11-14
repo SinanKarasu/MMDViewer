@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F7218C650000000000000001 /* Examples in Resources */ = {isa = PBXBuildFile; fileRef = F7218C650000000000000002 /* Examples */; };
 		1202636CF8FE4123221B5F70 /* PreviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BCD56664EBB42855F686FBC /* PreviewController.swift */; };
 		25B53A35B4CEA14CFAE5D92F /* MMDViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E17BD555FC2E9A8F1B9EA5 /* MMDViewerApp.swift */; };
 		3AF36611E807CCC4D842E537 /* MMDWorkbench in Frameworks */ = {isa = PBXBuildFile; productRef = 3AE593E61562D09D115C412D /* MMDWorkbench */; };
@@ -19,6 +18,7 @@
 		6F1EDA280AB89CD95326284B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21411FB5BFCBFCE56A2D2AB4 /* Cocoa.framework */; };
 		7AC12FB9F9066B0C521853CA /* MMDQuickLookThumbnail.appex in Embed Quick Look Extensions */ = {isa = PBXBuildFile; fileRef = AFAD2876FA0D4661DF2E7433 /* MMDQuickLookThumbnail.appex */; platformFilters = (macos, ); settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A33FCB718AFC56312F7B3D26 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21411FB5BFCBFCE56A2D2AB4 /* Cocoa.framework */; };
+		F7218C650000000000000001 /* Examples in Resources */ = {isa = PBXBuildFile; fileRef = F7218C650000000000000002 /* Examples */; };
 		F7A8795830A3940F0092F848 /* MMDViewer.icon in Resources */ = {isa = PBXBuildFile; fileRef = F7A8795730A393140092F848 /* MMDViewer.icon */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F7218C650000000000000002 /* Examples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Examples; sourceTree = "<group>"; };
 		0A5C4A6D9A6945E7A0101001 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		108B49C74B43A096360AC11B /* QuickLook.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = QuickLook.entitlements; sourceTree = "<group>"; };
 		1DD021AF2E993033D972048A /* MMDViewer.entitlements */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.entitlements; path = MMDViewer.entitlements; sourceTree = "<group>"; };
@@ -50,9 +49,10 @@
 		BE3FD5BC00C2C683064BA976 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8BB4CD5B88AB321E3B92F23 /* ThumbnailProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThumbnailProvider.swift; sourceTree = "<group>"; };
 		C9BE27EAA3C232C1DEBCF1F2 /* MMDViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MMDViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDA68E211D1E8C4954C4491D /* MMDWorkbench_MMDWorkbench.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = MMDWorkbench_MMDWorkbench.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA68E211D1E8C4954C4491D /* MMDWorkbench_MMDWorkbench.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 1; path = MMDWorkbench_MMDWorkbench.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E17BD555FC2E9A8F1B9EA5 /* MMDViewerApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MMDViewerApp.swift; sourceTree = "<group>"; };
 		E4A458706E963A3B08E656AD /* MMDQuickLookPreview.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MMDQuickLookPreview.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7218C650000000000000002 /* Examples */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Examples; sourceTree = "<group>"; };
 		F7A8795730A393140092F848 /* MMDViewer.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = MMDViewer.icon; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,7 +114,6 @@
 				652EEB7E1DFD5E2D54A772CD /* Info.plist */,
 				C8BB4CD5B88AB321E3B92F23 /* ThumbnailProvider.swift */,
 			);
-			name = Thumbnail;
 			path = Thumbnail;
 			sourceTree = "<group>";
 		};
@@ -126,7 +125,6 @@
 				23C675A52F65238D601DD76B /* Thumbnail */,
 				CDA68E211D1E8C4954C4491D /* MMDWorkbench_MMDWorkbench.bundle */,
 			);
-			name = QuickLook;
 			path = QuickLook;
 			sourceTree = "<group>";
 		};
@@ -161,7 +159,6 @@
 				BE3FD5BC00C2C683064BA976 /* Info.plist */,
 				6BCD56664EBB42855F686FBC /* PreviewController.swift */,
 			);
-			name = Preview;
 			path = Preview;
 			sourceTree = "<group>";
 		};
@@ -242,8 +239,9 @@
 		29414CF6F531ADFE0486FEF2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 2700;
+				LastUpgradeCheck = 2720;
 			};
 			buildConfigurationList = 69398FEB07B8FAFA2997A6ED /* Build configuration list for PBXProject "MMDViewer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -330,7 +328,7 @@
 				CODE_SIGN_ENTITLEMENTS = QuickLook/QuickLook.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4HVP45GV3U;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuickLook/Thumbnail/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
@@ -352,7 +350,7 @@
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = MMDViewer/MMDViewer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4HVP45GV3U;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = MMDViewer/Info.plist;
@@ -387,7 +385,7 @@
 				CODE_SIGN_ENTITLEMENTS = QuickLook/QuickLook.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4HVP45GV3U;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuickLook/Thumbnail/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
@@ -407,7 +405,7 @@
 				CODE_SIGN_ENTITLEMENTS = QuickLook/QuickLook.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4HVP45GV3U;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuickLook/Preview/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
@@ -454,9 +452,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 4HVP45GV3U;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -475,6 +476,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -490,7 +492,7 @@
 				"CODE_SIGN_ENTITLEMENTS[sdk=macosx*]" = MMDViewer/MMDViewer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4HVP45GV3U;
+				DEAD_CODE_STRIPPING = YES;
 				ENABLE_APP_SANDBOX = YES;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = MMDViewer/Info.plist;
@@ -524,7 +526,7 @@
 				CODE_SIGN_ENTITLEMENTS = QuickLook/QuickLook.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4HVP45GV3U;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuickLook/Preview/Info.plist;
 				MACOSX_DEPLOYMENT_TARGET = 26.0;
@@ -571,9 +573,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 4HVP45GV3U;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -585,6 +590,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
